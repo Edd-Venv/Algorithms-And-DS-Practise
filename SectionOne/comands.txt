@@ -1,0 +1,2 @@
+run only one test:
+i.e npm test SectionOne/FizzBuzz.test.js --watch
