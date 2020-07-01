@@ -1,5 +1,5 @@
 const reverseNegativeNumber = (number) => {
-  let stringVersionOfNumber = `${number}`;
+  const stringVersionOfNumber = `${number}`;
   let stringVersionOfReversedNumber = "-";
 
   for (let i = stringVersionOfNumber.length - 1; i > 0; i--) {
@@ -10,8 +10,9 @@ const reverseNegativeNumber = (number) => {
 };
 
 const reversePositiveNumber = (number) => {
-  let stringVersionOfNumber = `${number}`;
+  const stringVersionOfNumber = `${number}`;
   let stringVersionOfReversedNumber = "";
+
   for (let i = stringVersionOfNumber.length - 1; i >= 0; i--) {
     stringVersionOfReversedNumber += stringVersionOfNumber[i];
   }
