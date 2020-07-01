@@ -9,9 +9,7 @@ const revrse = (str) => {
 
 function palindrome(str) {
   const reversedString = revrse(str);
-
-  if (str === reversedString) return true;
-  else return false;
+  return str === reversedString;
 }
 
 describe("SECTION ONE, PALINDROME", () => {
