@@ -1,3 +1,4 @@
+//min 1hr
 const reverseNegativeNumber = (number) => {
   const stringVersionOfNumber = `${number}`;
   let stringVersionOfReversedNumber = "-";
@@ -24,9 +25,9 @@ function reverseInt(number) {
   if (typeof number === "number") {
     const stringVersionOfNumber = `${number}`;
 
-    if (stringVersionOfNumber.includes("-")) {
+    if (stringVersionOfNumber.includes("-"))
       return reverseNegativeNumber(number);
-    } else return reversePositiveNumber(number);
+    else return reversePositiveNumber(number);
   }
 
   return "NaN";
