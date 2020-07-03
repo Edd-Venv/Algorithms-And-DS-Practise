@@ -1,4 +1,3 @@
-//min 1hr
 const reverseNegativeNumber = (number) => {
   const stringVersionOfNumber = `${number}`;
   let stringVersionOfReversedNumber = "-";
@@ -33,7 +32,7 @@ function reverseInt(number) {
   return "NaN";
 }
 
-describe("SECTION ONE, REVERSE-INTERGER", () => {
+describe.skip("SECTION ONE, REVERSE-INTERGER", () => {
   it("SHOULD REVERSE THE ORDERING OF NUMBERS", () => {
     expect(reverseInt(15)).toBe(51);
     expect(reverseInt(981)).toBe(189);
