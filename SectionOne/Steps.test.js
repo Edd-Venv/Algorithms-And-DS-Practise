@@ -32,7 +32,7 @@ function steps(number, row = 0, stairs = "") {
   steps(number, row, stairs);
 }
 
-describe("SECTION ONE, STEPS", () => {
+describe.skip("SECTION TWO, STEPS", () => {
   it("SHOULD CONSOLE LOG A STEP SHAPE WITH N LEVELES", () => {
     steps(3);
   });
