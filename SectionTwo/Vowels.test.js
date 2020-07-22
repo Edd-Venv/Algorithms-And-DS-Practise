@@ -1,4 +1,5 @@
-function vowels(str) {
+//solution 1
+/*function vowels(str) {
   const caseInsensitiveString = str.toLowerCase();
 
   let count = 0;
@@ -11,6 +12,12 @@ function vowels(str) {
     }
   }
   return count;
+}*/
+
+//solution 2
+function vowels(str) {
+  const matches = str.match(/[aeiou]/gi);
+  return matches ? matches.length : 0;
 }
 
 describe("SECTION TWO", () => {
