@@ -13,7 +13,7 @@
 }*/
 
 //Solution 2
-function pyramid(number, row = 0, level = " ") {
+function pyramid(n, row = 0, level = " ") {
   if (row === n) {
     return;
   }
@@ -34,7 +34,7 @@ function pyramid(number, row = 0, level = " ") {
   pyramid(n, row, level + add);
 }
 
-describe("SECTION TWO", () => {
+describe.skip("SECTION TWO", () => {
   it("SHOULD CREATE AND RETRUN A PYRAMID", () => {
     pyramid(3);
   });

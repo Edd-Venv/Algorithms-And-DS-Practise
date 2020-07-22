@@ -1,3 +1,18 @@
+function vowels(str) {
+  const caseInsensitiveString = str.toLowerCase();
+
+  let count = 0;
+  const vowelsArray = ["a", "e", "i", "o", "u"];
+
+  for (let i = 0; i < caseInsensitiveString.length; i++) {
+    let char = caseInsensitiveString[i];
+    if (vowelsArray.includes(char)) {
+      count++;
+    }
+  }
+  return count;
+}
+
 describe("SECTION TWO", () => {
   it("SHOULD RETURN THE TOTAL NUMBER OF TIMES VOWELS APPEAR IN A SENTENCE", () => {
     expect(vowels("Hi There!")).toBe(3);
