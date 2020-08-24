@@ -43,7 +43,7 @@ function matrixFun(number) {
   return results;
 }
 
-describe("SECTION TWO, ", () => {
+describe.skip("SECTION TWO, ", () => {
   it("SHOULD RETURN AN NXN SPIRAL MATRIX", () => {
     expect(matrixFun(2)).toEqual([
       [1, 2],
