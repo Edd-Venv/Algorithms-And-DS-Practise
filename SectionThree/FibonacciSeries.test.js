@@ -1,15 +1,14 @@
 /*
 // Recursive Solution
-
 function fibonacci(number) {
   if (number < 2) return number;
   else return fibonacci(number - 1) + fibonacci(number - 2);
-}*/
+  //Time Complexity = O(n^2)
+}
+*/
 
 function fibonacci(number) {
   if (number < 0) return;
-  if (number === 0) return 0;
-  if (number === 1 || number === 2) return 1;
 
   const series = [0, 1, 1];
 
@@ -18,6 +17,7 @@ function fibonacci(number) {
   }
 
   return series[number];
+  //Time Complexcity O(n)
 }
 
 describe("SECTION ONE, FIBONACCI SERIES", () => {
