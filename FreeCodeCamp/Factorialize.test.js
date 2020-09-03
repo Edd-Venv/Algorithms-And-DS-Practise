@@ -1,3 +1,17 @@
+function factorialize(number) {
+    if (typeof number !== "number") return;
+    let factorial = 1;
+
+    if (number === 0) return factorial;
+    
+    for (let i = number; i > 0; i--) {
+    factorial *= i;
+    }
+    return factorial;
+    //Time Complexity = O(n);
+}
+
+
 describe("FREECODECAMP",  () => {
     it("SHOULD RETURN THE FACTORIAL OF A GIVEN NUMBER", () => {
         expect(factorialize(5)).toBe(120);
