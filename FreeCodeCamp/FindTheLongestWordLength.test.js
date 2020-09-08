@@ -1,4 +1,4 @@
-function findLongestWordLength(str) {
+/*function findLongestWordLength(str) {
   if (typeof str !== "string") return;
   let length = 0;
   let count = 0;
@@ -8,6 +8,7 @@ function findLongestWordLength(str) {
       //console.log(count, length, str[i]);
       if (count > length) {
         length = count;
+        count = 0;
       }
 
       count = 0;
@@ -16,7 +17,32 @@ function findLongestWordLength(str) {
     //console.log(count, length, str[i]);
     count++;
   }
-  return length;
+  return length - 1;
+}
+*/
+
+function findLongestWordLength(str) {
+  if (typeof str !== "string") return;
+
+  const words = [];
+  let word = "";
+  let wordLength = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") word += str[i];
+
+    if (str[i] == " ") {
+      words.push(word);
+      word = "";
+    }
+  }
+  words.push(word);
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > wordLength) wordLength = words[i].length;
+  }
+
+  return wordLength;
 }
 
 describe("FREECODECAMP", () => {
