@@ -1,26 +1,38 @@
-/*function findLongestWordLength(str) {
+//RECURSIVE SOLUTION
+function findLongestWordLength(
+  str,
+  currentPostion = 0,
+  previousWord = 0,
+  word = ""
+) {
   if (typeof str !== "string") return;
-  let length = 0;
-  let count = 0;
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i + 1] === " ") {
-      //console.log(count, length, str[i]);
-      if (count > length) {
-        length = count;
-        count = 0;
-      }
+  let previousWordLength = previousWord;
+  let currentStringPostion = currentPostion;
 
-      count = 0;
-      console.log(count, length, str[i]);
-    }
-    //console.log(count, length, str[i]);
-    count++;
+  if (currentPostion > str.length) return previousWordLength;
+
+  if (str[currentPostion] === " " || currentPostion === str.length) {
+    if (previousWordLength < word.length) previousWordLength = word.length;
+
+    return findLongestWordLength(
+      str,
+      currentStringPostion + 1,
+      previousWordLength
+    );
   }
-  return length - 1;
-}
-*/
+  word += str[currentPostion];
 
+  return findLongestWordLength(
+    str,
+    currentStringPostion + 1,
+    previousWordLength,
+    word
+  );
+}
+
+/*
+//IRRETIVE SOLUTION
 function findLongestWordLength(str) {
   if (typeof str !== "string") return;
 
@@ -43,7 +55,7 @@ function findLongestWordLength(str) {
   }
 
   return wordLength;
-}
+}*/
 
 describe("FREECODECAMP", () => {
   it("SHOULD RETURN THE LENGTH OF THE LONGEST WORD IN A STRING", () => {
