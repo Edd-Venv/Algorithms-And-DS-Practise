@@ -1,3 +1,30 @@
+//IRRATIVE SOLUTION
+function largestOfFour(arr) {
+  if (typeof arr !== "object") return;
+  const resultantArray = [];
+  let largestNumber = 0;
+
+  for (let i = 0; i <= arr.length; i++) {
+    if (largestNumber !== 0) resultantArray.push(largestNumber);
+    largestNumber = 0;
+
+    if (arr[i] !== undefined)
+      for (let j = 0; j < arr[i].length; j++) {
+        if (Math.sign(arr[i][j]) === -1) {
+          if (j === 0) largestNumber = -1000;
+
+          if (largestNumber < arr[i][j]) largestNumber = arr[i][j];
+        }
+
+        if (Math.sign(arr[i][j]) !== -1) {
+          if (largestNumber < arr[i][j]) largestNumber = arr[i][j];
+        }
+      }
+  }
+
+  return resultantArray;
+}
+
 describe("FREECODECAMP", () => {
   it("SHOULD RETURN AN ARRAY OF THE LARGEST NUMBERS IN THE SUB-ARRAYS", () => {
     expect(
