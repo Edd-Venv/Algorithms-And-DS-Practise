@@ -25,6 +25,53 @@ function largestOfFour(arr) {
   return resultantArray;
 }
 
+/*//RECURSIVE SOLUTION
+function largestOfFour(
+  arr,
+  arrayIndex = 0,
+  subArrayIndexCount = 0,
+  largestNumber = 0,
+  resultantArray = []
+) {
+  if (typeof arr !== "object") return;
+  const arrayLength = arr.length;
+
+  //Return Final Array
+  if (arrayIndex === arrayLength) return resultantArray;
+
+  let subArrayLength = arr[arrayIndex].length;
+  let subArrayIndex = arr[arrayIndex][subArrayIndexCount];
+
+  //Move Through Current SubArray
+  if (subArrayIndexCount < subArrayLength) {
+    if (largestNumber < subArrayIndex) {
+      largestNumber = subArrayIndex;
+    }
+    largestOfFour(
+      arr,
+      arrayIndex,
+      subArrayIndexCount + 1,
+      largestNumber,
+      resultantArray
+    );
+  }
+  //Move To Next SubArray
+  if (subArrayIndexCount === subArrayLength) {
+    if (largestNumber < subArrayIndex) {
+      largestNumber = subArrayIndex;
+    }
+    resultantArray.push(largestNumber);
+    largestOfFour(
+      arr,
+      arrayIndex + 1,
+      subArrayIndexCount * 0,
+      largestNumber * 0,
+      resultantArray
+    );
+  }
+}
+*/
+
 describe("FREECODECAMP", () => {
   it("SHOULD RETURN AN ARRAY OF THE LARGEST NUMBERS IN THE SUB-ARRAYS", () => {
     expect(
