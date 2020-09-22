@@ -1,3 +1,17 @@
+//Recursive Solution
+/*function repeatStringNumTimes(str, num, repeatedString = "", stringIndex = 0) {
+  if (typeof str !== "string" || typeof num !== "number") return;
+  const expectedRepeatedStringLength = str.length * num;
+  const repeatedStringLength = repeatedString.length;
+
+  if (repeatedStringLength === expectedRepeatedStringLength)
+    return repeatedString;
+
+  if (stringIndex === str.length) stringIndex = 0;
+  repeatedString += str[stringIndex];
+  repeatStringNumTimes(str, num, repeatedString, stringIndex + 1);
+}
+*/
 //IRRATIVE SOLUTION
 function repeatStringNumTimes(str, num) {
   if (typeof str !== "string" || typeof num !== "number") return;
